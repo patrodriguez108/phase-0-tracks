@@ -17,3 +17,5 @@ A commit a message in a log that record any changes made within a git branch fol
 * What is a merge conflict?
 
 A merge conflict is a stituation in which Git would prevent a merge from occurring. This could happen when attempting to merge files when two different coders may have edited the same line differently or if one coder deleted a line while another coder added to the same line.
+
+Also I am currently updating this file to resolve a merge conflict.

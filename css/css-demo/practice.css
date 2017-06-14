@@ -1,0 +1,26 @@
+#contact-info {
+  font-size: .8em;
+}
+
+.job {
+  background-color: #e9e5dc;
+  margin-top: 10px;
+  border-radius: 25px;
+    padding: 20px;
+}
+
+.practice {
+  font-size: .8em;
+}
+
+a:link {
+  color: green;
+}
+
+a:hover {
+  color: purple;
+}
+
+#personal-objective h2 {
+  color:pink;
+}

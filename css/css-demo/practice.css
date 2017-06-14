@@ -20,3 +20,7 @@ a:link {
 a:hover {
   color: purple;
 }
+
+#personal-objective h2 {
+  color:pink;
+}

@@ -1,5 +1,6 @@
 body {
   max-width: 960px;
+  margin: auto;
 }
 
 blockquote {
@@ -45,3 +46,24 @@ main {
   width: 50%;
   display: inline-block;
 }
+/*@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+}*/
+@media screen and (max-width: 500px) {
+  body {
+     font-size: 4px;
+  }
+}
+@media screen and (max-width: 500px) {
+  body {
+  }
+    section {
+      width: 100%;
+    }
+     main {
+      width: 100%;
+     }
+}
+

@@ -1,0 +1,32 @@
+Robot Using an Elevator
+
+- Walk to elevator
+- Push "up" button
+  - Wait until elevator doors open
+- Once doors open walk into elevator
+- Inside elevator push button of desired floor (11th floor)
+- Wait inside elevator as elevator moves up
+  - Avoid eye contact with fellow employees as elevator moves up
+- Once elevator reaches desired floor, exit elevator
+- Walk to office
+
+Human Brushing Teeth
+
+- Walk into bathroom
+- Look in mirror
+  - Look at teeth
+  - Wet mouth
+- Pick up toothbrush
+  - Rinse toothbrush
+  - Apply toothpaste to toothbrush
+    - Cap toothpaste
+- Insert toothbrush into mouth
+- Move toothbrush along teeth
+  - Change motions of toothbrush along teeth
+    - Up and down
+    - Circular
+  - Brush behind teeth
+- Brush tongue by moving toothbrush along tongue
+  - Brush tongue until gunk is removed
+- Rinse mouth
+- Rinse toothbrush

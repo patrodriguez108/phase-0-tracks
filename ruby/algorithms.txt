@@ -1,0 +1,9 @@
+- Walk to elevator
+- Push "up" button
+  - Wait until elevator doors open
+- Once doors open walk into elevator
+- Inside elevator push button of desired floor (11th floor)
+- Wait inside elevator as elevator moves up
+  - Avoid eye contact with fellow employees as elevator moves up
+- Once elevator reaches desired floor, exit elevator
+- Walk to office

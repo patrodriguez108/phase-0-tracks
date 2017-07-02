@@ -13,5 +13,3 @@ bread = gets.chomp
 puts "Would you like to enroll in the company's health insurance?"
 
 health = gets.chomp
-
-end

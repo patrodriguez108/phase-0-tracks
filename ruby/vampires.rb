@@ -1,6 +1,6 @@
 puts "What is your name?"
 
-"name" = gets.chomp
+name = gets.chomp
 
   if name == "Drake Cula"
     vamp_names_are_obvi = true
@@ -12,7 +12,7 @@ puts "What is your name?"
 
 puts "How old are you?"
 
-"age" = gets.chomp
+age = gets.chomp
 
   if age >= "100"
     vamps_are_old = true
@@ -22,7 +22,7 @@ puts "How old are you?"
 
 puts "Our company cafeteria serves garlic bread. Should we order some for you?"
 
-"bread" = gets.chomp
+bread = gets.chomp
 
   if bread == "No"
     vamps_hate_garlic = true
@@ -32,7 +32,7 @@ puts "Our company cafeteria serves garlic bread. Should we order some for you?"
 
 puts "Would you like to enroll in the company's health insurance?"
 
-"health" = gets.chomp
+health = gets.chomp
 
   if health == "No"
     vamps_donut_need_insurance = true

@@ -1,3 +1,13 @@
+counter = 0
+
+  puts "How many employees will be processed?"
+  x = gets.chomp
+    x = x.to_i
+
+while counter < x
+  puts counter
+
+
 puts "What is your name?"
 
 name = gets.chomp
@@ -50,4 +60,7 @@ elsif vamp_names_are_obvi
   puts "Definitely a vampire"
 else
   puts "Results inconclusive"
+end
+
+  counter += 1
 end

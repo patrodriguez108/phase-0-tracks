@@ -30,5 +30,12 @@ form[:pets] = gets.chomp
       form[:pets] = false
   end
 
+# allow user to update decor theme
+if form[:decor] = "decor_theme"
+  puts "New decor theme"
+  form[:decor] = gets.chomp
+else form[:decor] = "none"
+end
+
 # print hash
 p form

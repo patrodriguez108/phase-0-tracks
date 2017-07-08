@@ -1,3 +1,57 @@
+university = {
+  tech_dept: {
+    dept_head: 'lazarus',
+    student_employees: [
+      'zoe', 'mark', 'mike', 'asha'
+    ],
+    equipment: [
+      'computers', 'projectors', 'televisions'
+    ]
+  },
+  classroom_1: {
+    course: 'philosophy_304',
+    professors: [
+      'stewart', 'jones', 'priya'
+    ],
+    students: 34,
+    equipment: ['projector', 'computer']
+  },
+  classroom_2: {
+    course: 'asian_art_history',
+    professor: 'balaga',
+    students: 42,
+    equipment: ['projector', 'computer', 'overhead_projector']
+  },
+  classroom_3: {
+    course: 'correspondence_in_a_flat_world',
+    professor: 'duncan',
+    students: 13,
+    equipment: ['projector', 'computer']
+  },
+  student_lounge: {
+    menu: {
+      bagels: [
+        'plain', 'garlic', 'everything', 'cinnamon_raisin', 'chocolate_chip'
+      ],
+      cream_cheese: [
+        'plain', 'sun_dried_tomato', 'strawberry', 'low_fat'
+      ],
+      coffee: [
+        'light', 'dark', 'soy', 'iced'
+      ],
+      drinks: [
+        'orange_juice', 'apple_juice', 'bottled_water'
+      ],
+      sandwiches: [
+        'egg', 'sausage', 'bacon', 'ham', 'veggie', 'cheese'
+      ]
+    },
+    tables: 6,
+    chairs: 27,
+    computers: 15
+  }
+}
+
 # student orders food
 puts "student ordered"
 p university[:student_lounge][:menu][:bagels][1]

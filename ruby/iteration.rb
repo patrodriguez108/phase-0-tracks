@@ -31,7 +31,6 @@ p new_list
 
 # iterate through through array using .map!
 professors.map! do |staff|
-  puts staff
   staff.reverse
 end
 

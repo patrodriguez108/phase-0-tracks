@@ -24,3 +24,17 @@ def spy(name)
 end
 
 puts spy("Hector Fernandez")
+
+loop_counter = 0
+
+loop do
+  puts "Enter your name (Type DONE when done)"
+  name = gets.chomp
+  if name == "DONE"
+    puts "Thank you. Your service is important"
+    break
+  else
+    puts spy(name)
+  end
+  loop_counter += 1
+end

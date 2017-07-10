@@ -107,3 +107,19 @@ count.each do |digit, word|
   puts "#{digit} is spelled #{word}"
 end
 
+# write out hash
+veg = {1 => 'spinach', 2 => 'tomato', 3 => 'spinach', 4 => 'carrots', 5 => 'squash', 6 => 'brocolli'}
+
+# print original hash
+puts "Original hash"
+p veg
+
+# iterate through hash and delete items until false
+
+veg.each do |number, veggie|
+  veg.delete_if {|number, veggie| veggie.include?('s')}
+  break
+end
+# print new hash
+puts "New Hash"
+p veg

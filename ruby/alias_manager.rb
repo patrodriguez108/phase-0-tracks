@@ -25,6 +25,12 @@ end
 
 puts spy("Hector Fernandez")
 
+# write out empty hash
+spy_names = {
+  name: "",
+  spy: ""
+}
+
 loop_counter = 0
 
 loop do
@@ -37,4 +43,9 @@ loop do
     puts spy(name)
   end
   loop_counter += 1
+end
+
+# print out hash
+spy_names.each do |name, spy|
+  puts "#{name} is known internationally as #{spy}"
 end

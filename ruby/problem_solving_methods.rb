@@ -13,3 +13,4 @@ end
 
 array = [23, 42, 6, 98, 100]
 p search_arr(array, 42)
+p search_arr(array, 5)

@@ -1,5 +1,62 @@
 body {
-  background-color: gray;
+  background-color: beige;
   font-family: helvetica;
-  color: beige;
+  color: darkslategrey;
+}
+
+h1 {
+  color: darkgoldenrod;
+  font-family: bookman;
+}
+
+h2 {
+  color: rosybrown;
+  font-family: bookman;
+}
+
+header {
+  display: inline-block;
+  margin: 2px;
+  padding: 15px;
+}
+
+.column-1 {
+  background-color: lightblue;
+  width: 43%;
+  height: 50%;
+  margin: 1%;
+  padding: 2%;
+  display: inline-block;
+  float: left;
+  border:3px solid chocolate;
+}
+
+.column-2 {
+  background-color: lightblue;
+  width: 43%;
+  height: 50%;
+  margin: 1%;
+  padding: 2%;
+  display: inline-block;
+  float: right;
+  border:3px solid chocolate;
+}
+
+footer {
+  display: inline-block;
+  float: right;
+  margin: 1%;
+  padding: 30px;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: purple;
+}
+
+a:visited {
+  color: white;
 }

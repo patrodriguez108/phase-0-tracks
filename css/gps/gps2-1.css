@@ -5,7 +5,7 @@ body {
 }
 
 h1 {
-  color: darkgoldenrod;
+  color: beige;
   font-family: bookman;
 }
 
@@ -16,8 +16,10 @@ h2 {
 
 header {
   display: inline-block;
-  margin: 2px;
-  padding: 15px;
+  margin: 1%;
+  padding: 2%;
+  background: url(images/metal.JPG);
+  color: white;
 }
 
 .column-1 {
@@ -46,7 +48,7 @@ footer {
   display: inline-block;
   float: right;
   margin: 1%;
-  padding: 30px;
+  padding: 2%;
 }
 
 a {

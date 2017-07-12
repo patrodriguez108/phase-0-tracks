@@ -24,7 +24,7 @@ puts speak
 
 treats = Santa.new
   def food(cookie)
-    puts "That was a good" + " " + cookie + "!"
+    puts "That was a good #{cookie}!"
   end
 
 # print eat_milk_and_cookies method

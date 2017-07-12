@@ -4,7 +4,7 @@ class Santa
 end
 
 # create instance of santa class for speak
-# define method
+# add line to define method
 # print "Ho ho ho! Haaaaapy Holidays!"
 # end method
 
@@ -17,11 +17,19 @@ greeting = Santa.new
 
 puts speak
 
-# write out method scope for eat_milk_and_cookies method
+# create instance of Santa class for treats
+# add line to define method
 # print "That was a good <parameter>!"
 # end method
 
+treats = Santa.new
+  def food(cookie)
+    puts "That was a good" + " " + cookie + "!"
+  end
+
 # print eat_milk_and_cookies method
+
+puts food("snickerdoodle")
 
 # write out method scope for initialize method
 # print "Initializing Santa instance..."

@@ -13,6 +13,14 @@ def create_list(grocery)
     array.each do |item|
     list[item] = 1
     end
+  p list
+end
+
+list =  create_list("banana pasta avocado toothpaste")
+
+def add_list(list, item, quantity)
+  p list
+  list.include?(item)
 end
 
 # Method to add an item to a list

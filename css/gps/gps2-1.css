@@ -6,16 +6,13 @@ body {
 
 h1 {
   color: beige;
-  font-family: bookman;
 }
 
 h2 {
   color: rosybrown;
-  font-family: bookman;
 }
 
 header {
-  display: inline-block;
   margin: 1%;
   padding: 2%;
   background: url(images/metal.JPG);

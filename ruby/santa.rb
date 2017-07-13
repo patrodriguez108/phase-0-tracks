@@ -76,6 +76,32 @@ class Santa
     puts "Gender: #{@gender}"
     puts "Ethnicity: #{@ethnicity}"
   end
+
+# define method that will age Santa by 1 year
+# add one year to Santa age
+# end method
+  def age
+    @age += 1
+  end
+# define getter that will list Santa age
+# print age
+# end method
+# define
+# define method that will state Santa dissatisfaction with reindeer
+# print "Santa is mad at #{reindeer}"
+# end method
+# define method that will move reindeer to end of array
+# move reindeer to end of array
+# end method
+# define method that will print current gender
+# print gender
+# end method
+# define setter that will enable Santa to reassign gender
+# have variable equal gender attribute
+# end method
+# define getter that will print ethnicity attribute
+# print ethnicity
+# end method
 end
 
 # write out driver code showing Santa diversity
@@ -83,6 +109,7 @@ end
     # specify attributes in parentheses
   # print "This Santa is"
   # call about method
+
 
 firstsanta = Santa.new("male", "Filipino")
 puts "This Santa is"

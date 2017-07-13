@@ -27,7 +27,8 @@ end
 # input: list, item name, and optional quantity
 # steps:
 #  - write out method scope
-#  - argument
+#  - print list
+#  -
 #  - end method
 # output: print method
 

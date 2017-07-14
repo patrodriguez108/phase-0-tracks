@@ -16,12 +16,15 @@ def create_list(grocery)
   p list
 end
 
+puts "Grocery Hash"
+
 list =  create_list("bananas pasta avocado toothpaste")
 
 def add_list(list, item, quantity)
-  #list.add("item", "quanity")
   list[item] = quantity
 end
+
+puts "Addition of items"
 
 add_list(list, "beef", 1)
 add_list(list, "lemonade", 2)
@@ -34,6 +37,8 @@ def remove(list, item)
   list.delete(item)
 end
 
+puts "Subtraction of items"
+
 remove(list, "toothpaste")
 remove(list, "lemonade")
 p list
@@ -41,6 +46,8 @@ p list
 def count(list, item, new_quantity)
   list[item] = new_quantity
 end
+
+puts "Update quantity"
 
 count(list, "bananas", 4)
 count(list, "pasta", 7)
@@ -54,6 +61,8 @@ def print(list)
     puts "The amount of #{item} we need is #{new_quantity}"
   end
 end
+
+puts "Official grocery list"
 
 print(list)
 

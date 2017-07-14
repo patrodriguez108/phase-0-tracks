@@ -19,9 +19,37 @@ end
 list =  create_list("banana pasta avocado toothpaste")
 
 def add_list(list, item, quantity)
-  p list
-  list.include?(item)
+  #list.add("item", "quanity")
+  list[item] = quantity
 end
+
+add_list(list, "beef", 1)
+p list
+
+def remove(list, item)
+  list.delete(item)
+end
+
+remove(list, "toothpaste")
+p list
+
+def count(list, item, new_quantity)
+  list[item] = new_quantity
+end
+
+count(list, "banana", 4)
+count(list, "pasta", 7)
+count(list, "avocado", 3)
+count(list, "beef", 2)
+p list
+
+def print(list)
+  list.each do |item, new_quantity|
+    puts "We need to buy #{new_quantity} #{item}"
+  end
+end
+
+print(list)
 
 # Method to add an item to a list
 # input: list, item name, and optional quantity

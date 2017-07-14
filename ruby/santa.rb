@@ -58,31 +58,12 @@ puts initializing
 # print ethnicity and gender
 # end method
 
-class Santa
-  def initialize(gender, ethnicity)
-    @gender = gender
-    @ethnicity = ethnicity
-  end
 
-  def reindeer
-    @reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-  end
-
-  def how_old(age)
-    @age = 0
-  end
-
-  def about
-    puts "Gender: #{@gender}"
-    puts "Ethnicity: #{@ethnicity}"
-  end
 
 # define method that will age Santa by 1 year
 # add one year to Santa age
 # end method
-  def age
-    @age += 1
-  end
+
 # define getter that will list Santa age
 # print age
 # end method
@@ -102,7 +83,61 @@ class Santa
 # define getter that will print ethnicity attribute
 # print ethnicity
 # end method
+
+class Santa
+  def initialize(gender, ethnicity)
+    @gender = gender
+    @ethnicity = ethnicity
+  end
+
+  def reindeer
+    @reindeer_ranking = []
+    reindeer = "Rudolph Dasher Dancer Prancer Vixen Comet Cupid Donner Blitzen"
+    array = reindeer.split(' ')
+      array.each do |reindeer_ranking|
+    end
+  end
+
+  def reindeer_ranking
+    reindeer
+  end
+
+  def get_mad_at(index)
+    index = index.to_i
+    bad_deer = reindeer_ranking[index]
+    puts "Santa is mad at" + " " + bad_deer
+    puts bad_deer + " " + "will be moved to the end of the list"
+    deer_array = reindeer_ranking.rotate(-index)
+    p deer_array
+  end
+
+  def age
+    @age = 0
+  end
+
+  def celebrate_birthday(new_age)
+    @age = new_age
+  end
+
+  def ethnicity
+    @ethnicity
+  end
+
+  def gender
+    @gender
+  end
+
+  def gender=(gender_update)
+    @gender = gender_update
+  end
+
+  def age
+    @age
+  end
+
 end
+
+
 
 # write out driver code showing Santa diversity
   # create new instance equalled to a variable
@@ -111,19 +146,29 @@ end
   # call about method
 
 
+puts "Santa_01"
 firstsanta = Santa.new("male", "Filipino")
-puts "This Santa is"
-firstsanta.about
+puts "This Santa is #{firstsanta.gender} and #{firstsanta.ethnicity}"
+firstsanta.celebrate_birthday(1)
+puts "This Santa is now #{firstsanta.age} years old"
 
+puts "Santa_02"
 secondsanta = Santa.new("non-binary", "Indian")
-puts "This Santa is"
-secondsanta.about
+secondsanta.gender = "gender fluid"
+puts "This Santa is #{secondsanta.gender} and #{secondsanta.ethnicity}"
 
+puts "Santa_03"
 thirdsanta = Santa.new("female", "Mixed Race")
-puts "This Santa is"
-thirdsanta.about
+puts "This Santa is #{thirdsanta.gender} and #{thirdsanta.ethnicity}"
 
-fourthsanta = Santa.new("trans male", "Black")
-puts "This Santa is"
-fourthsanta.about
+puts "Santa_04"
+fourthsanta = Santa.new("male", "Black")
+fourthsanta.gender = "trans male"
+puts "This Santa is #{fourthsanta.gender} and #{fourthsanta.ethnicity}"
 
+puts "Reindeer ranking"
+santahasdeer = Santa.new("non-binary", "European")
+puts "This Santa is the oldest known Santa and #{santahasdeer.gender} and #{santahasdeer.ethnicity}"
+puts "This is Santa's current reindeer ranking"
+p santahasdeer.reindeer_ranking
+santahasdeer.get_mad_at(4)

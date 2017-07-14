@@ -1,10 +1,12 @@
 class TodoList
 
-  def initialize
-    list = Array.new
-
-  def get_items(x, y)
+  def initialize(x, y)
     list = [x, y]
+    p list
+  end
+
+  def get_items(list)
+    list
   end
 
   # def add_item(z)

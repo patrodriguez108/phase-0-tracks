@@ -1,10 +1,10 @@
 class TodoList
 
   def initialize
-    @list = Array.new
+    list = Array.new
 
   def get_items(x, y)
-    @list = [x, y]
+    list = [x, y]
   end
 
   # def add_item(z)

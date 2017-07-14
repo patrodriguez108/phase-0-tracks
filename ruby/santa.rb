@@ -84,7 +84,7 @@ puts initializing
 # print ethnicity
 # end method
 
-class Santa
+class Santa_02
   def initialize(gender, ethnicity)
     @gender = gender
     @ethnicity = ethnicity
@@ -147,9 +147,73 @@ end
 
 
 puts "Santa_01"
-firstsanta = Santa.new("male", "Filipino")
+firstsanta = Santa_02.new("male", "Filipino")
 puts "This Santa is #{firstsanta.gender} and #{firstsanta.ethnicity}"
 firstsanta.celebrate_birthday(1)
+puts "This Santa is now #{firstsanta.age} years old"
+
+puts "Santa_02"
+secondsanta = Santa_02.new("non-binary", "Indian")
+secondsanta.gender = "gender fluid"
+puts "This Santa is #{secondsanta.gender} and #{secondsanta.ethnicity}"
+
+puts "Santa_03"
+thirdsanta = Santa_02.new("female", "Mixed Race")
+puts "This Santa is #{thirdsanta.gender} and #{thirdsanta.ethnicity}"
+
+puts "Santa_04"
+fourthsanta = Santa_02.new("male", "Black")
+fourthsanta.gender = "trans male"
+puts "This Santa is #{fourthsanta.gender} and #{fourthsanta.ethnicity}"
+
+puts "Reindeer ranking"
+santahasdeer = Santa_02.new("non-binary", "European")
+puts "This Santa is the oldest known Santa and #{santahasdeer.gender} and #{santahasdeer.ethnicity}"
+puts "This is Santa's current reindeer ranking"
+p santahasdeer.reindeer_ranking
+santahasdeer.get_mad_at(4)
+
+
+
+# Santa class with attr_reader and attr_accessor
+
+class Santa
+  attr_reader :ethnicity
+  attr_accessor :gender
+  attr_accessor :age
+
+  def initialize(gender, ethnicity)
+    @gender = gender
+    @ethnicity = ethnicity
+  end
+
+  def reindeer
+    @reindeer_ranking = []
+    reindeer = "Rudolph Dasher Dancer Prancer Vixen Comet Cupid Donner Blitzen"
+    array = reindeer.split(' ')
+      array.each do |reindeer_ranking|
+    end
+  end
+
+  def reindeer_ranking
+    reindeer
+  end
+
+  def get_mad_at(index)
+    index = index.to_i
+    bad_deer = reindeer_ranking[index]
+    puts "Santa is mad at" + " " + bad_deer
+    puts bad_deer + " " + "will be moved to the end of the list"
+    deer_array = reindeer_ranking.rotate(-index)
+    p deer_array
+  end
+
+end
+
+puts "Santa_01"
+firstsanta = Santa.new("male", "Filipino")
+puts "This Santa is #{firstsanta.gender} and #{firstsanta.ethnicity}"
+firstsanta.age = 1
 puts "This Santa is now #{firstsanta.age} years old"
 
 puts "Santa_02"

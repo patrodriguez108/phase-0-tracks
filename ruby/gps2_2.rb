@@ -16,18 +16,62 @@ def create_list(grocery)
   p list
 end
 
-list =  create_list("banana pasta avocado toothpaste")
+puts "Grocery Hash"
+
+list =  create_list("bananas pasta avocado toothpaste")
 
 def add_list(list, item, quantity)
-  p list
-  list.include?(item)
+  list[item] = quantity
 end
+
+puts "Addition of items"
+
+add_list(list, "beef", 1)
+add_list(list, "lemonade", 2)
+add_list(list, "tomatoes", 3)
+add_list(list, "onions", 1)
+add_list(list, "ice cream", 4)
+p list
+
+def remove(list, item)
+  list.delete(item)
+end
+
+puts "Subtraction of items"
+
+remove(list, "toothpaste")
+remove(list, "lemonade")
+p list
+
+def count(list, item, new_quantity)
+  list[item] = new_quantity
+end
+
+puts "Update quantity"
+
+count(list, "bananas", 4)
+count(list, "pasta", 7)
+count(list, "avocado", 3)
+count(list, "beef", 2)
+count(list, "ice cream", 1)
+p list
+
+def print(list)
+  list.each do |item, new_quantity|
+    puts "The amount of #{item} we need is #{new_quantity}"
+  end
+end
+
+puts "Official grocery list"
+
+print(list)
 
 # Method to add an item to a list
 # input: list, item name, and optional quantity
 # steps:
 #  - write out method scope
-#  - argument
+#  - print list
+#  -
 #  - end method
 # output: print method
 

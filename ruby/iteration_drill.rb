@@ -13,6 +13,10 @@ end
 # zombie_apocalypse_supplies using #each.
 # For instance: are boots in your list of supplies?
 # ----
+zombie_apocalypse_supplies.each do |items|
+  search = gets.chomp
+  puts items.include?(search)
+end
 
 # 3. You can't carry too many things, you've only got room in your pack for 5.
 # Remove items in your zombie_apocalypse_supplies in any way you'd like,

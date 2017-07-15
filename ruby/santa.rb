@@ -236,3 +236,18 @@ puts "This Santa is the oldest known Santa and #{santahasdeer.gender} and #{sant
 puts "This is Santa's current reindeer ranking"
 p santahasdeer.reindeer_ranking
 santahasdeer.get_mad_at(4)
+
+puts "Random Santa Generator"
+
+santas = []
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid"]
+example_ethnicities = ["Black", "Latino", "white", "Japanese-African", "Filipino", "Mixed", "Pacific Islander", "Malay", "Chinese", "Mexican", "Inuit"]
+age_range = (0..140).to_a
+example_genders.length.times do |i|
+  santas << Santa.new(example_genders.sample, example_ethnicities.sample)
+end
+
+santas.each do |generate|
+  generate.age = age_range.sample
+  puts "This Santa is #{generate.ethnicity}, #{generate.gender}, and #{generate.age} years old"
+end

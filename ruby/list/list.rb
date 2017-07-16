@@ -17,8 +17,9 @@ class TodoList
   end
 
   def get_item(i)
-    i.to_i
-    p @list.index[i]
+    @list = array
+    num = i.to_i
+    p array[num]
   end
 
 end

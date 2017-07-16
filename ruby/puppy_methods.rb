@@ -74,7 +74,7 @@ puts "Wizard minorities"
 
 wizards.each do |magic|
   puts "This wizard is #{magic.ethnicity}"
-  puts "To get pass the glass ceiling this wizard opens up a door to access the stairs and walk above it"
+  puts "To get passed the glass ceiling this wizard opens up a door to access the stairs and walk above it"
   puts "#{magic.unlock}"
   puts "Looks like the stairs are out. The wizard will need to levitate. "
   puts "#{magic.levitate}"

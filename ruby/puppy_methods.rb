@@ -45,20 +45,37 @@ years.dog_years(3)
 # Release 2
 
 class Spells
+  attr_reader :ethnicity
 
-  def initialize
-    puts "Howdy"
-end
+  def initialize(ethnicity)
+    @ethnicity = ethnicity
+  end
 
   def unlock
     puts "Alohomora"
 
   end
 
-
   def levitate
     puts "It's leviosa not leviosaah"
 
   end
 
+end
+
+wizards = []
+wizard_ethnicities = ["Black", "Latino", "Welsh", "Japanese-African", "Filipino", "Mixed", "Pacific Islander", "Malay", "Chinese", "Mexican", "Inuit", "Ethiopian", "Scottish", "Indian", "Pakistani", "Thai", "Roman", "Greek", "Italian", "Colombian", "Maya", "Indigenous American", "Indegenous Australian", "Creole", "Haitian", "Puerto Rican", "French Canadian", "French", "Czech", "Lithuanian", "Iraqi", "Iranian", "Syrian", "Russian", "Nigerian", "Tibetan", "Portuguese", "Brazilian", "Spanish", "Hungarian", "Polish", "Swedish", "Norwegian", "Biracial", "Israeli", "Turkish", "Roma", "Icelandic", "Simoan", "Palestinian"]
+
+wizard_ethnicities.each do |init|
+  wizards << Spells.new(init)
+end
+
+puts "Wizard minorities"
+
+wizards.each do |magic|
+  puts "This wizard is #{magic.ethnicity}"
+  puts "To get pass the glass ceiling this wizard opens up a door to access the stairs and walk above it"
+  puts "#{magic.unlock}"
+  puts "Looks like the stairs are out. The wizard will need to levitate. "
+  puts "#{magic.levitate}"
 end

@@ -4,29 +4,17 @@ describe WordGame do
   let(:game) { WordGame.new }
 
   it "enters word" do
-    game.enter("example")
-    expect(game.enter).to eq "example"
+    expect(game.enter("example")).to eq ["e", "x", "a", "m", "p", "l", "e"]
   end
 
-end
-
-
-# require_relative 'game'
-
-# describe WordGame do
-#   let(:game) { WordGame.new }
-
-#   it "enters word" do
-#     expect(game.enter("example") to eq ("example")
-#   end
-
   # it "creates word blank" do
-  #   expect(game.blank_arr) to eq ("_ _ _ _ _ _ _")
+  #   expect(game.blank_arr).to eq ("_ _ _ _ _ _ _")
   # end
 
   # it "searches letter" do
-  #   game.search("m") to eq ("You got a letter")
-  #   game.search("z") to eq ("Sorry, guess again")
+  #   game.enter("example")
+  #   game.search("m").to eq ("You got a letter")
+  #   game.search("z").to eq ("Sorry, guess again")
   # end
 
 end

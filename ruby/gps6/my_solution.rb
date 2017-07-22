@@ -113,3 +113,13 @@ end
 
 #=======================================================================
 # Reflection Section
+
+# - One hash has the state name as the key and the other hash as the value; this hash uses quotes to list the key as well as a hash rocket to attach the value. The other hash has the keys (population_density and population) written out with a colon to attach the values (data attached to population_density and population).
+
+# - require_relative grabs the data from a relative file. It differes from require in that require_relative considers the files to be relatives, the parent being the directory that they are in, while require needs to list the file based off of which folder it is in.
+
+# - To iterate through a hash one needs to use block methods. A few ways to initiate a block method are using <hash>.each, <hash>.map, and <hash>.map!
+
+# - Well in general what stood out to me the most about virus_effects was that it called instance methods that are written after it in the class. I had never seen this before, and before this GPS I had no idea that that was even possible. I also noticed that the parameters were listed as attributes, which I later discovered didn't need to be listed at all.
+
+# - I would say that the concept of data structures was most solidified for me in this challenge. Since I started working in Ruby, I have had so many issues with data structures. I feel like this was a a great step in my understanding.

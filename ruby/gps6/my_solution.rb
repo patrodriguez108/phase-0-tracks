@@ -34,7 +34,7 @@ class VirusPredictor
 # this predicted_deaths method has control flow and what that does is provide statistical data of number of deaths based off of the population density of each state
 
   def predicted_deaths
-    # predicted deaths is solely based on population density
+    predicted deaths is solely based on population density
     if @population_density >= 200
       number_of_deaths = (@population * 0.4).floor
     elsif @population_density >= 150
@@ -45,6 +45,16 @@ class VirusPredictor
       number_of_deaths = (@population * 0.1).floor
     else
       number_of_deaths = (@population * 0.05).floor
+
+# maybe need to find a way to write an algorithm that factors population density in number ranges
+
+    # if @population_density >= 150
+    #   number_of_deaths = (@population * 0.3).floor
+    # elsif @population_density >= 50
+    #   number_of_deaths = (@population * 0.2).floor
+    # else
+    #   number_of_deaths = (@population * 0.05).floor
+
     end
 
     print "#{@state} will lose #{number_of_deaths} people in this outbreak"

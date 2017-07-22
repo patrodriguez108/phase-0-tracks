@@ -6,17 +6,26 @@ puts encrypt("abc")
 
 puts encrypt("zed")
 
-# method scope
-def decrypt(this)
-# plug alphabet into variable
-  x = "abcdefghijklmnopqrstuvwxyz"
-# reverse alphabet
-  x.reverse
-# find a way to have x.reverse be accessed by thing variable
-  new_alpha = x.reverse
-  thing = new_alpha
-# access next in index
-  thing[0].next + thing[1].next + thing[2].next
+# write out method scope
+def decrypt(thing)
+# # # plug alphabet into variable
+  index = 0
+  alpha = "abcdefghijklmnopqrstuvwxyz"
+  new_message = ""
+# # # access index
+# # # access next in reverse
+  while index < thing.length
+    if thing[index]== " "
+      thing[index]
+    else
+      thing[index]
+      alpha_index = alpha.index(thing[index])
+      alpha_index = alpha_index - 1
+      new_message += alpha[alpha_index]
+      index += 1
+    end
+  end
+  puts "#{new_message}"
 end
 
 puts decrypt("bcd")

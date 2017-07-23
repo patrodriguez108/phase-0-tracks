@@ -104,10 +104,37 @@ p update_extinct_animals
 # "Saiga Antelope"
 # Driver code example: is_extinct?(extinct_animals, "Andean Cat")
 # ----
+def is_extinct(hash, animal)
+  hash.each do |species, year|
+    if species == animal
+      p true
+    end
+  end
+  if !hash.has_key?(animal)
+    p false
+  end
+end
 
+is_extinct(update_extinct_animals, "Andean Cat")
+is_extinct(update_extinct_animals, "Dodo")
+is_extinct(update_extinct_animals, "Saiga Antelope")
 
 # 5. We just found out that the Passenger Pigeon is actually not extinct!
 # Remove them from extinct_animals and return the key value pair as a two item array.
 # Find a Ruby Hash built-in method that helps you accomplish this or build
 # your own method using #each
 # ----
+
+def remove_notextinct(hash, item, value)
+  not_extinct = []
+  hash.each do |animal, year|
+    if animal == item && year == value
+      not_extinct.push(animal) && not_extinct.push(year)
+    end
+  end
+  p not_extinct
+  hash.delete(item)
+  p hash
+end
+
+remove_notextinct(extinct_animals, "Passenger Pigeon", 1914)

@@ -14,6 +14,23 @@
 //     conditional statements should be able to determine if values of objects equal one another or not
 // print function
 
+// Release 2
+// write out function
+//   variable should equal entire alphabet
+//   variable should equal empty array
+//   function should have a parameter that takes integers
+//   initiate loop
+//     split alphabet into array
+//     form strings from alphabet array
+//     integer should form array of formed strings
+//     loop should be defined with 1 as the least amount of letters to a string and 10 as the highest amount of letters to a string
+//   print array
+// initiate loop that performs the function 10 times
+//   feed 10 returns into function from Release 0
+// print results
+
+
+
 var nonsense = ["supercalifragiliciousexplialidocious", "lemonade", "liar"];
 
 var westeros = ["oldgods", "newgods", "dracarys"];
@@ -54,6 +71,20 @@ function thisThing(object1, object2) {
 }  else {
     console.log("false");
   }
+};
+
+function wordGen(num) {
+  var generated = []
+  var ber = parseInt(num);
+  var alpha = "abcdefghijklmnopqrstuvwxyz".split('');
+  for (var i = 1; i <= ber; i++) {
+    var random = Math.floor((Math.random() * 10) + 1);
+    var alpha_shuffle = alpha.sort(function(a, b){return 0.5 - Math.random()});
+    var sliced = alpha_shuffle.slice(0, random)
+    var ran_string = sliced.join('')
+    generated.push(ran_string);
+  }
+  console.log(generated);
 }
 
 countLetters(nonsense);
@@ -66,3 +97,9 @@ thisThing(salim, roger);
 
 thisThing(alvin, theodore);
 
+wordGen(3);
+
+
+// for (var i = 1; i <= 10; i++) {
+//   wordGen(3);
+// };

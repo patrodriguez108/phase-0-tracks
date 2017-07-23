@@ -80,8 +80,8 @@ function wordGen(num) {
   for (var i = 1; i <= ber; i++) {
     var random = Math.floor((Math.random() * 10) + 1);
     var alpha_shuffle = alpha.sort(function(a, b){return 0.5 - Math.random()});
-    var sliced = alpha_shuffle.slice(0, random)
-    var ran_string = sliced.join('')
+    var sliced = alpha_shuffle.slice(0, random);
+    var ran_string = sliced.join('');
     generated.push(ran_string);
   }
   return generated;

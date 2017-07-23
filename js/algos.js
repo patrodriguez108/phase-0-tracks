@@ -43,7 +43,7 @@ var roger = {name: "Roger", age: 32};
 
 var alvin = {name: "Alvin", age: 23};
 
-var theodore = {name: "Theodore", age: 21}
+var theodore = {name: "Theodore", age: 21};
 
 function countLetters(array) {
 if (array[0].length > array[1].length && array[0].length > array[2].length) {
@@ -98,7 +98,7 @@ thisThing(salim, roger);
 thisThing(alvin, theodore);
 
 for (var i = 1; i <= 10; i++) {
-  var generator = wordGen(3)
-  console.log(generator)
-  countLetters(generator)
+  var generator = wordGen(3);
+  console.log(generator);
+  countLetters(generator);
 };

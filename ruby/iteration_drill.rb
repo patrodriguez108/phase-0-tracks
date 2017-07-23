@@ -14,23 +14,32 @@ end
 # For instance: are boots in your list of supplies?
 # ----
 def find(array, item)
+  puts "Checking for #{item}..."
   array.each do |items|
     if items.include?(item)
-      puts "You have a #{item}"
+      puts "Yes, you have a #{item}"
     end
   end
   if !array.include?(item)
-    puts "You don't have that item"
+    puts "No, you don't have any #{item}"
   end
 end
 
 find(zombie_apocalypse_supplies, 'boots')
 find(zombie_apocalypse_supplies, 'hatchet')
+find(zombie_apocalypse_supplies, 'lemons')
+find(zombie_apocalypse_supplies, 'water jug')
 
 # 3. You can't carry too many things, you've only got room in your pack for 5.
 # Remove items in your zombie_apocalypse_supplies in any way you'd like,
 # leaving only 5, using #each.
 # ----
+lighter_supplies = []
+zombie_apocalypse_supplies.each do |new_supplies|
+  zombie_apocalypse_supplies.delete_if { |new_supplies| new_supplies.length > 7 }
+  lighter_supplies << new_supplies
+end
+p lighter_supplies
 
 # 4. You found another survivor! This means you can combine your supplies.
 # Create a new combined supplies list out of your zombie_apocalypse_supplies
@@ -40,6 +49,14 @@ find(zombie_apocalypse_supplies, 'hatchet')
 other_survivor_supplies = [ "warm clothes", "rations", "compass", "camp stove",
                             "solar battery", "flashlight"]
 # ----
+new_inventory = []
+other_survivor_supplies.each do |distribute|
+  new_inventory.push(distribute)
+end
+lighter_supplies.each do |add_items|
+  new_inventory.push(add_items)
+end
+p new_inventory
 
 # Hash Drills
 

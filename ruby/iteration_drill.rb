@@ -73,15 +73,27 @@ extinct_animals = {
 # 1. Iterate through extinct_animals hash using #each, printing each key/value pair
 # with a dash in between the key and value, and an asterisk between each pair.
 # ----
+extinct_animals.each do |animal, year|
+  puts "* #{animal} - #{year}"
+end
 
 # 2. Keep only animals in extinct_animals if they were extinct before
 # the year 2000, using #each.
 # ----
+extinct_animals.each do |animal, year|
+  extinct_animals.delete_if { |animal, year| year >= 2000 }
+end
+p extinct_animals
 
 # 3. Our calculations were completely off, turns out all of those animals went
 # extinct 3 years before the date provided. Update the values in extinct_animals
 # using #each, so they accurately reflect what year the animal went extinct.
 # ----
+update_extinct_animals = {}
+extinct_animals.each do |animal, year|
+  update_extinct_animals[animal] = year.to_i - 3
+end
+p update_extinct_animals
 
 # 4. You've heard that the following animals might be extinct, but you're not sure.
 # Build a method  using #each that checks if an animal is in the hash and returns true/false.
@@ -92,6 +104,7 @@ extinct_animals = {
 # "Saiga Antelope"
 # Driver code example: is_extinct?(extinct_animals, "Andean Cat")
 # ----
+
 
 # 5. We just found out that the Passenger Pigeon is actually not extinct!
 # Remove them from extinct_animals and return the key value pair as a two item array.

@@ -74,7 +74,7 @@ function thisThing(object1, object2) {
 };
 
 function wordGen(num) {
-  var generated = []
+  var generated = [];
   var ber = parseInt(num);
   var alpha = "abcdefghijklmnopqrstuvwxyz".split('');
   for (var i = 1; i <= ber; i++) {

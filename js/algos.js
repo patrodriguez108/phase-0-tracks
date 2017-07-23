@@ -84,7 +84,7 @@ function wordGen(num) {
     var ran_string = sliced.join('')
     generated.push(ran_string);
   }
-  console.log(generated);
+  return generated;
 }
 
 countLetters(nonsense);
@@ -97,9 +97,8 @@ thisThing(salim, roger);
 
 thisThing(alvin, theodore);
 
-wordGen(3);
-
-
-// for (var i = 1; i <= 10; i++) {
-//   wordGen(3);
-// };
+for (var i = 1; i <= 10; i++) {
+  var generator = wordGen(3)
+  console.log(generator)
+  countLetters(generator)
+};

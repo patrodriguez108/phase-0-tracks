@@ -1,0 +1,20 @@
+2) One would need to make sure that there were three tables, each with a primary key, and three foreign keys in the join table that referred to each of those primary keys.
+
+3) Instead of just typing in 'SELECT *', one can instead type in all the fields of data after 'SELECT'
+
+4) One could do an outer join for all three tables that the business is connected to. Each business should have all their data listed.
+
+Output from welp.db
+
+sqlite> SELECT * from businesses;
+1|wedding chapel
+2|lotus yoga
+
+sqlite> SELECT * from users;
+1|Bradford|Pitt
+2|Mandy|Kaling
+sqlite>
+
+sqlite> SELECT * from reviews;
+1|five|Great chapel good jesus|1|1
+2|four and a half|Not enough hotties|2|2

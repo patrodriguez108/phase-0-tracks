@@ -1,20 +1,13 @@
-2) One would need to make sure that there were three tables, each with a primary key, and three foreign keys in the join table that referred to each of those primary keys.
+2)
+sqlite> SELECT * from businesses join reviews ON businesses.business_id = reviews.business_num
+   ...> join users ON users.users_id = reviews.users_num;
+1|wedding chapel|1|five|Great chapel good jesus|1|1|1|Bradford|Pitt
+2|lotus yoga|2|four and a half|Not enough hotties|2|2|2|Mandy|Kaling
 
-3) Instead of just typing in 'SELECT *', one can instead type in all the fields of data after 'SELECT'
+3)
+sqlite> SELECT businesses.business_name, users.last_name, users.first_name, reviews.stars, reviews.comment from businesses join reviews ON businesses.business_id = reviews.business_num
+   ...> join users ON users.users_id = reviews.users_num;
+wedding chapel|Pitt|Bradford|five|Great chapel good jesus
+lotus yoga|Kaling|Mandy|four and a half|Not enough hotties
 
 4) One could do an outer join for all three tables that the business is connected to. Each business should have all their data listed.
-
-Output from welp.db
-
-sqlite> SELECT * from businesses;
-1|wedding chapel
-2|lotus yoga
-
-sqlite> SELECT * from users;
-1|Bradford|Pitt
-2|Mandy|Kaling
-sqlite>
-
-sqlite> SELECT * from reviews;
-1|five|Great chapel good jesus|1|1
-2|four and a half|Not enough hotties|2|2

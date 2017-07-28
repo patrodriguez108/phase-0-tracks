@@ -1,4 +1,7 @@
-1) sqlite> SELECT * from team_member;
+Release 2
+
+1)
+sqlite> SELECT * from team_member;
 1|Nightwing|Richard Grayson|Batman|1
 2|Miss Martian|M'gann M'orzz|Martian Manhunter|1
 3|Aqualad|Kaldur'ahm|Aquaman|1
@@ -15,7 +18,8 @@
 14|Arsenal|Roy Harper|Green Arrow|3
 15|Spoiler|Stephanie Brown|Batman|3
 
-2) sqlite> UPDATE team_member SET given_name="Roy Harper (clone, but still a valued member of the team)" WHERE code_name="Red Arrow";
+2)
+sqlite> UPDATE team_member SET given_name="Roy Harper (clone, but still a valued member of the team)" WHERE code_name="Red Arrow";
 sqlite> SELECT * from team_member;
 1|Nightwing|Richard Grayson|Batman|1
 2|Miss Martian|M'gann M'orzz|Martian Manhunter|1
@@ -32,9 +36,9 @@ sqlite> SELECT * from team_member;
 13|Rocket|Raquel Ervin|Icon|3
 14|Arsenal|Roy Harper|Green Arrow|3
 15|Spoiler|Stephanie Brown|Batman|3
-sqlite>
 
-3) sqlite> SELECT * FROM team_member, squadron WHERE team_member.squad_id = squadron.id;
+3)
+sqlite> SELECT * FROM team_member, squadron WHERE team_member.squad_id = squadron.id;
 1|Nightwing|Richard Grayson|Batman|1|1|Alpha|Bludhaven|false
 2|Miss Martian|M'gann M'orzz|Martian Manhunter|1|1|Alpha|Bludhaven|false
 3|Aqualad|Kaldur'ahm|Aquaman|1|1|Alpha|Bludhaven|false
@@ -50,9 +54,9 @@ sqlite>
 13|Rocket|Raquel Ervin|Icon|3|3|Gamma|Happy Harbor|true
 14|Arsenal|Roy Harper|Green Arrow|3|3|Gamma|Happy Harbor|true
 15|Spoiler|Stephanie Brown|Batman|3|3|Gamma|Happy Harbor|true
-sqlite>
 
-4) sqlite> SELECT team_member.code_name, squadron.squad_desig FROM team_member JOIN squadron ON team_member.squad_id = squadron.id;
+4)
+sqlite> SELECT team_member.code_name, squadron.squad_desig FROM team_member JOIN squadron ON team_member.squad_id = squadron.id;
 Nightwing|Alpha
 Miss Martian|Alpha
 Aqualad|Alpha
@@ -69,7 +73,8 @@ Rocket|Gamma
 Arsenal|Gamma
 Spoiler|Gamma
 
-5) sqlite> DELETE FROM team_member WHERE code_name="Kid Flash";
+5)
+sqlite> DELETE FROM team_member WHERE code_name="Kid Flash";
 sqlite> SELECT * from team_member;
 1|Nightwing|Richard Grayson|Batman|1
 2|Miss Martian|M'gann M'orzz|Martian Manhunter|1
@@ -86,3 +91,52 @@ sqlite> SELECT * from team_member;
 14|Arsenal|Roy Harper|Green Arrow|3
 15|Spoiler|Stephanie Brown|Batman|3
 sqlite>
+
+
+Release 3
+
+2) Left join:
+sqlite> SELECT squadron.leaguemem_oncall, team_member.code_name
+   ...> FROM squadron
+   ...> LEFT JOIN team_member ON squadron.id = team_member.squad_id
+   ...> ORDER BY squadron.leaguemem_oncall;
+false|Aqualad
+false|Artemis
+false|Miss Martian
+false|Nightwing
+false|Superboy
+false|Batgirl
+false|Beast Boy
+false|Red Arrow
+false|Wondergirl
+false|Zatanna
+true|Arsenal
+true|Robin
+true|Rocket
+true|Spoiler
+
+Self join:
+sqlite> SELECT A.code_name AS code_name1, B.code_name AS code_name2, A.mentor
+   ...> FROM team_member A, team_member B
+   ...>
+   ...> WHERE A.id <> B.id
+   ...> AND A.mentor = B.mentor
+   ...> ORDER BY A.mentor;
+Nightwing|Batgirl|Batman
+Nightwing|Robin|Batman
+Nightwing|Spoiler|Batman
+Batgirl|Nightwing|Batman
+Batgirl|Robin|Batman
+Batgirl|Spoiler|Batman
+Robin|Batgirl|Batman
+Robin|Nightwing|Batman
+Robin|Spoiler|Batman
+Spoiler|Batgirl|Batman
+Spoiler|Nightwing|Batman
+Spoiler|Robin|Batman
+Artemis|Arsenal|Green Arrow
+Artemis|Red Arrow|Green Arrow
+Red Arrow|Arsenal|Green Arrow
+Red Arrow|Artemis|Green Arrow
+Arsenal|Artemis|Green Arrow
+Arsenal|Red Arrow|Green Arrow

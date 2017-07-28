@@ -10,4 +10,6 @@ sqlite> SELECT businesses.business_name, users.last_name, users.first_name, revi
 wedding chapel|Pitt|Bradford|five|Great chapel good jesus
 lotus yoga|Kaling|Mandy|four and a half|Not enough hotties
 
-4) One could do an outer join for all three tables that the business is connected to. Each business should have all their data listed.
+4)
+sqlite> SELECT * from businesses, reviews, users WHERE business_id = business_num = users_num = users_id = 1;
+1|wedding chapel|1|five|Great chapel good jesus|1|1|1|Bradford|Pitt

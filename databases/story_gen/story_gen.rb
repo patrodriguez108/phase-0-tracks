@@ -31,9 +31,9 @@ def create_story(db, name, setting, conflict)
   db.execute("INSERT INTO story (name, setting, conflict) VALUES (?, ?, ?)", [name, setting, conflict])
 end
 
-# 60.times do
-#   create_story(db, Faker::Name.name, settings.sample, conflicts.sample)
-# end
+60.times do
+  create_story(db, Faker::Name.name, settings.sample, conflicts.sample)
+end
 
 # explore ORM by retrieving data
 stories = db.execute("SELECT * FROM story;")

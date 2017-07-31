@@ -31,12 +31,12 @@ def create_story(db, name, setting, conflict)
   db.execute("INSERT INTO story (name, setting, conflict) VALUES (?, ?, ?)", [name, setting, conflict])
 end
 
-# 30.times do
-#   create_story(db, Faker::Name.name, settings.sample, conflicts.sample)
-# end
+60.times do
+  create_story(db, Faker::Name.name, settings.sample, conflicts.sample)
+end
 
 # explore ORM by retrieving data
 stories = db.execute("SELECT * FROM story;")
 stories.each do |story|
- puts "#{story['name']} is in the world of #{story['setting']}. The plot involves #{story['conflict']}"
+ puts "#{story[1]} is in the world of #{story[2]}. The plot involves #{story[3]}. For reference log onto TV Tropes"
 end

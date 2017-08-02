@@ -1,0 +1,32 @@
+.container {
+  margin-left: 500px;
+}
+
+#hat {
+  position: relative;
+  top: 45px;
+  left: 0px;
+  z-index: 0;
+
+}
+
+#sherry {
+  position: relative;
+  top: 0px;
+  left: 10px;
+  z-index: -1;
+}
+
+#glasses {
+  position: relative;
+  top: 332px;
+  left: 50px;
+  z-index: 0;
+}
+
+p {
+  position: relative;
+  top: 50px;
+  left: 50px;
+  z-index: 0;
+}

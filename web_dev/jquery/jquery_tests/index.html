@@ -2,6 +2,19 @@
 <html>
 <head>
   <title>American Gods</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+  $("#hide").click(function(){
+    $("em").hide();
+  });
+
+  $("#show").click(function(){
+    $("em").show();
+  });
+
+});
+  </script>
 </head>
 <body>
 <h1>Why American Gods is the show we need</h1>
@@ -26,5 +39,8 @@
 </ol>
 <p>For more about American Gods you may read <a href="http://www.vanityfair.com/hollywood/2017/05/american-gods-season-1-episode-4-git-gone-laura-neil-gaiman-recap"> this interview with Neil Gaiman on Vanity Fair</a> or <a href="https://www.youtube.com/watch?v=3awG5wEE7LU"> watch the trailer</a>.</p>
 <p><em>Worship it.</em></p>
+
+<button id = "hide">Hide</button>
+<button id= "show">Show</button>
 </body>
 </html>

@@ -4,4 +4,4 @@
 1) save money since extra hardware would not need to be purchased
 2) commodify the flow of data since related data would be running within the same host server
 
-4)
+4) It is considered a bad idea to run programs as a root user in Linux because this is a security hazard. This would enable the system to write to the program.

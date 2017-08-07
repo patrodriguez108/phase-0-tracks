@@ -58,8 +58,12 @@ get '/great_job' do
   end
 end
 
-get '/math/:num1/:num2' do
-  bers = []
-  bers.push(params[:num1])
-  bers.push(params[:num2])
+get '/math/:num1/add/:num2' do
+  def addition(x, y)
+    x + y
+  end
+  addition(params[:num1], params[:num2])
+  # bers = []
+  # bers.push(params[:num1])
+  # bers.push(params[:num2])
 end

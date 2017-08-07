@@ -67,3 +67,5 @@ get '/math/:num1/add/:num2' do
   # bers.push(params[:num1])
   # bers.push(params[:num2])
 end
+
+# I was unable to find a way to convert the route parameters into integers without stumbling onto an error screen
